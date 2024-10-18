@@ -5,43 +5,29 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 3rem;
+.header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
-header div {
-    display: inline-block;
-}
-
-header nav {
-    display: inline-block;
-    margin-left: 30%;
-}
-
-header a {
+.header a {
     text-decoration: none;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    
+    color: #333333;
+    padding: 1em 0;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
+    list-style: none;
     padding: 0;
+    margin-bottom: 0;
 }
 
 nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    margin: 0 3em;
 }
 
 section {
@@ -49,8 +35,98 @@ section {
     text-align: center;
 }
 
+/* Home */
+.home {
+    margin-top: 5em;
+}
+
+/* Home ends */
+/* services */
+
+.services .container {
+    margin: 4em auto;
+}
+
+.card-left-side .my-card-one {
+    rotate: 10deg;
+    left: 0;    
+    animation-name: left-side-animation-one;
+    animation-duration: 1s;
+    box-shadow: 2px -2px 15px black;
+}
+
+.card-left-side .my-card-two {
+    position: absolute;
+    rotate: 21deg;
+    top: 1em;
+    left: 15em;
+    animation-name: left-side-animation-two;
+    animation-duration: 1.5s;
+    box-shadow: 2px -2px 15px black;
+}
+
+
+@keyframes left-side-animation-one {
+    from {
+        left: -10em;
+    }
+
+    to {
+        left: 0em;
+    }
+}
+
+@keyframes left-side-animation-two {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 15em;
+    }
+}
+
+
+.card-right-side .my-card-one {
+    rotate: -21deg;
+    z-index: 1;
+    animation-name: right-side-animation-one;
+    animation-duration: 1.5s;
+    box-shadow: -2px -2px 15px black;
+}
+
+.card-right-side .my-card-two {
+    position: absolute;
+    rotate: -11deg;
+    top: -1em;
+    left: 14em;
+    animation-name: right-side-animation-two;
+    animation-duration: 1s;
+    box-shadow: -2px -2px 15px black;
+}
+
+@keyframes right-side-animation-one {
+    from {
+        right: -10em;
+    }
+
+    to {
+        right: 0em;
+    }
+}
+
+@keyframes right-side-animation-two {
+    from {
+        left: 24em;
+    }
+
+    to {
+        left: 14em;
+    }
+}
+
+/* services ends */
 .service {
-    background-color: #fff;
     margin: 1rem;
     padding: 1rem;
     border-radius: 5px;
@@ -64,4 +140,62 @@ footer {
     padding: 1rem 0;
     width: 100%;
     bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .header{
+        position: static;
+        top: unset;
+        right: unset;
+        left: unset;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 1em auto;
+    }
+    .mobile-apps > div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .mobile-apps .content {
+        margin-top: 7em;
+    }
+    
+    .mobile-apps .card-right-side .my-card-two {
+        position: unset;
+    }
+
+    .high-quality-game .content {
+        margin-top: 5em;
+    }
+
+    .high-quality-game .card-left-side .my-card-two {
+        position: unset;
+        top: -4em;
+        animation-name: left-side-animation-two;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes left-side-animation-two {
+        from {
+            left: -10em;
+        }
+    
+        to {
+            left: 0em;
+        }
+    }
+
+    .card-right-side .my-card-one, 
+    .card-right-side .my-card-two,
+    .card-left-side .my-card-one, 
+    .card-left-side .my-card-two {
+        left: 0;
+    }
+
+    
 }
