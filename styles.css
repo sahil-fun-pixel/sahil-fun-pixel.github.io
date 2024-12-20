@@ -31,6 +31,7 @@ nav ul li {
 }
 
 section {
+    margin-top: 8em;
     padding: 2rem;
     text-align: center;
 }
@@ -133,6 +134,25 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* about us */
+.about .about-content h2 {
+    margin-bottom: 2em;
+}
+
+.about .about-content h4 {
+    margin-bottom: 0.5em;
+}
+
+.about .about-content p {
+    margin-bottom: 2em;
+}
+
+.about .about-content li {
+    margin-bottom: 0.5em;
+}
+
+
+/* about us end */
 footer {
     background-color: #333;
     color: #fff;
@@ -149,6 +169,18 @@ footer {
 
 .footer-info .privacy {
     color: unset;
+    text-decoration: unset;
+}
+
+.privacy-page .privacy-content h1 {
+    margin-bottom: 1em;
+}
+.privacy-page .privacy-content h4 {
+    margin-bottom: 0.5em;
+}
+
+.privacy-page .privacy-content p {
+    margin: 0 0 2em;
 }
 
 @media only screen and (max-width: 500px) {
